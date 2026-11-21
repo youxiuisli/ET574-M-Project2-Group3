@@ -1,5 +1,12 @@
 ID,TYPE,COMMIT #,STATUS,DESCRIPTION,REPORTER,ASSIGNEE,DUE,CREATED,RESOLVED,NOTES
-1,task,,open,Set up repository and sample files,,Qingyun Li,21-Nov,21-Nov,,
+1,task,,closed,Set up repository and sample files,,Qingyun Li,21-Nov,21-Nov,21-Nov,
 2,task,,open,Implement factorial(),,Qingyun Li,29-Nov,21-Nov,,
 3,task,,open,Implement is_prime(),,Qingyun Li,29-Nov,21-Nov,,
-4,task,,open,Add jsunStation as collaborator,,Qingyun Li,29-Nov,21-Nov,,
+4,task,,closed,Add jsunStation as collaborator,,Qingyun Li,29-Nov,21-Nov,21-Nov,
+5,task,,open,Implement core function,,Andrew Kirk,29-Nov,21-Nov,,function name TBD
+6,task,,open,Implement original function,,Andrew Kirk,29-Nov,21-Nov,,function name TBD
+7,task,,open,Write unit tests for Andrew's functions,,Qingyun Li,29-Nov,21-Nov,,
+8,task,,open,Write unit tests for factorial() and is_prime(),,Andrew Kirk,29-Nov,21-Nov,,
+9,task,,open,Write unit tests for own functions,,Qingyun Li,29-Nov,21-Nov,,
+10,task,,open,Write unit tests for own functions,,Andrew Kirk,29-Nov,21-Nov,,
+11,task,,open,Write README.md,,Qingyun Li,29-Nov,21-Nov,,
