@@ -1,56 +1,31 @@
 # my_math.py
+# Qingyun Li - QCC ID: (24467146)
+# Andrew Kirk - QCC ID: 
 
 """
-
-Please provide the description of the function.
-function name: fibonacci 
-purpose: Computes the nth number in the Fibonacci sequence using an iterative approach. 
-The function also validates the input to ensure it is a non-negative integer.
-parameters: n (int): A non-negative integer representing 
-the position in the Fibonacci sequence.
-return value(s): (int): The nth Fibonacci number.
-
+function name: factorial
+purpose: Computes the factorial of a non-negative integer n
+(n! = 1 x 2 x 3 x ... x n) using an iterative approach.
+By definition, 0! = 1. The function also validates the input
+to ensure it is a non-negative integer.
+parameters: n (int): A non-negative integer whose factorial will be computed.
+return value(s): (int): The factorial of n.
 """
 
-def fibonacci(n):
+def factorial(n):
+    # Step 1: n must be an integer
+    if type(n) != int:
+        return None
 
-    if not isinstance(n, int):
-        raise TypeError("fibonacci(n) requires an integer n")
+    # Step 2: n cannot be negative
     if n < 0:
-        raise ValueError("n must be non-negative")
+        return None
 
-    if n < 2:
-        return n
+    # Step 3: multiply 1 x 2 x ... x n
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
 
-    a, b = 0, 1
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    return b
+    # Step 4: return the answer
+    return result
 
-
-
-"""
-
-Please provide the description of the function.
-function name: mean
-purpose: Calculates the average (arithmetic mean) of a collection of numeric values. 
-The function validates that all elements are numbers and ensures the input is not empty.
-parameters: A collection (e.g., list, tuple) of numeric values (integers or floats).
-return value(s): (float): The average of the input values
-"""
-
-def mean(values):
-
-    total = 0.0
-    count = 0
-
-    for v in values:
-        if not isinstance(v, (int, float)):
-            raise TypeError("mean() expects all elements to be numbers")
-        total += float(v)
-        count += 1
-
-    if count == 0:
-        raise ValueError("mean() of empty data")
-
-    return total / count
