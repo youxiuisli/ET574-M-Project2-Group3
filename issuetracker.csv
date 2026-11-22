@@ -1,6 +1,6 @@
 ID,TYPE,COMMIT #,STATUS,DESCRIPTION,REPORTER,ASSIGNEE,DUE,CREATED,RESOLVED,NOTES
 1,task,,closed,Set up repository and sample files,,Qingyun Li,21-Nov,21-Nov,21-Nov,
-2,task,,open,Implement factorial(),,Qingyun Li,29-Nov,21-Nov,,
+2,task,,closed,Implement factorial(),,Qingyun Li,29-Nov,21-Nov,21-Nov,
 3,task,,open,Implement is_prime(),,Qingyun Li,29-Nov,21-Nov,,
 4,task,,closed,Add jsunStation as collaborator,,Qingyun Li,29-Nov,21-Nov,21-Nov,
 5,task,,open,Implement core function,,Andrew Kirk,29-Nov,21-Nov,,function name TBD
