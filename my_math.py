@@ -4,12 +4,10 @@
 
 """
 function name: factorial
-purpose: Computes the factorial of a non-negative integer n
-(n! = 1 x 2 x 3 x ... x n) using an iterative approach.
-By definition, 0! = 1. The function also validates the input
-to ensure it is a non-negative integer.
-parameters: n (int): A non-negative integer whose factorial will be computed.
-return value(s): (int): The factorial of n.
+purpose: Returns the factorial of n (n! = 1 x 2 x ... x n). 0! is 1.
+Returns None if n is not an integer or is negative.
+parameters: n (int): a whole number that is 0 or greater.
+return value(s): (int): the factorial of n, or None if n is invalid.
 """
 
 def factorial(n):
