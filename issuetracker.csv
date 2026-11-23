@@ -1,12 +1,13 @@
 ID,TYPE,COMMIT #,STATUS,DESCRIPTION,REPORTER,ASSIGNEE,DUE,CREATED,RESOLVED,NOTES
-1,task,,closed,Set up repository and sample files,,Qingyun Li,21-Nov,21-Nov,21-Nov,
-2,task,,closed,Implement factorial(),,Qingyun Li,29-Nov,21-Nov,21-Nov,
+1,task,115cdcd,closed,Set up repository and sample files,,Qingyun Li and Andrew,21-Nov,21-Nov,21-Nov,"Created the repository project, starter files and responsibilities, and added an updated README and issue tracker."
+2,task,a3486fa; a1f6fdb,closed,Implement factorial(),,Qingyun Li,29-Nov,21-Nov,21-Nov,
 3,task,,open,Implement is_prime(),,Qingyun Li,29-Nov,21-Nov,,
-4,task,,closed,Add jsunStation as collaborator,,Qingyun Li,29-Nov,21-Nov,21-Nov,
-5,task,,open,Implement core function,,Andrew Kirk,29-Nov,21-Nov,,function name TBD
-6,task,,open,Implement original function,,Andrew Kirk,29-Nov,21-Nov,,function name TBD
-7,task,,open,Write unit tests for Andrew's functions,,Qingyun Li,29-Nov,21-Nov,,
-8,task,,open,Write unit tests for factorial() and is_prime(),,Andrew Kirk,29-Nov,21-Nov,,
-9,task,,open,Write unit tests for own functions,,Qingyun Li,29-Nov,21-Nov,,
-10,task,,open,Write unit tests for own functions,,Andrew Kirk,29-Nov,21-Nov,,
-11,task,,open,Write README.md,,Qingyun Li,29-Nov,21-Nov,,
+4,task,,closed,Add jsunStation as collaborator,,Qingyun Li,29-Nov,21-Nov,21-Nov,Added andrewtapin and jsunStation to the repository.
+5,task,463f1fc,open,Implement core sqrt(),,Andrew Kirk,29-Nov,21-Nov,,Implemented sqrt and passed all four tests. PR awaiting Qingyun's review.
+6,task,,open,Implement area_of_circle(),,Andrew Kirk,29-Nov,21-Nov,,Original function selected by Andrew.
+7,task,,open,Cross-test sqrt() and area_of_circle(),,Qingyun Li,29-Nov,21-Nov,,
+8,task,463f1fc,open,Cross-test factorial() and is_prime(),,Andrew Kirk,29-Nov,21-Nov,,Four factorial cross-test methods passed. is_prime tests pending.
+9,task,,open,Write own-function tests for factorial() and is_prime(),,Qingyun Li,29-Nov,21-Nov,,
+10,task,463f1fc,open,Write own-function tests for sqrt() and area_of_circle(),,Andrew Kirk,29-Nov,21-Nov,,Four sqrt test methods passed. area_of_circle tests pending.
+11,task,cb42db3; 463f1fc,open,Finalize README and issue tracker,,Qingyun Li and Andrew,29-Nov,21-Nov,,README updated. Final documentation and tracker review pending.
+12,task,,open,Review pull requests and test the full library,,Qingyun Li and Andrew,29-Nov,23-Nov,,Both members review changes and run all tests before final completion.
