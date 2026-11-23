@@ -1,6 +1,12 @@
+# Andrew Kirk
+# QCC Student ID: 24885486
+# Qingyun Li
+# QCC Student ID: 24467146
+# Queensborough Community College
+# ET574 Python Programming - Section M
+# Project 2: Math Function Library
 # my_math.py
-# Qingyun Li - QCC ID: (24467146)
-# Andrew Kirk - QCC ID: 
+# Shared library for Andrew Kirk and Qingyun Li.
 
 """
 function name: factorial
@@ -27,3 +33,21 @@ def factorial(n):
     # Step 4: return the answer
     return result
 
+
+"""
+function name: sqrt
+purpose: Calculates the square root of a non-negative number.
+author: Andrew Kirk
+parameters: x (int or float): A non-negative number.
+return value(s): (float): The square root of x.
+"""
+
+def sqrt(x):
+    # Step 1: Check if x is a number (int or float)
+    if not isinstance(x, (int, float)):
+        raise TypeError("sqrt(x) requires a number")
+    # Step 2: Check if x is non-negative
+    if x < 0:
+        raise ValueError("x must be non-negative")
+    # Step 3: Calculate the square root using exponentiation
+    return x ** 0.5
