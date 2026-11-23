@@ -9,7 +9,7 @@
 # Unit tests for the Math Function Library.
 
 import unittest
-from my_math import sqrt, factorial
+from my_math import sqrt, factorial, area_of_circle
 
 
 class TestMyMath(unittest.TestCase):
@@ -56,6 +56,29 @@ class TestMyMath(unittest.TestCase):
     def test_factorial_invalid_type(self):
         self.assertEqual(factorial(3.5), None)
         self.assertEqual(factorial("5"), None)
+
+
+    # Andrew Kirk: tests for area_of_circle().
+
+    # Check an integer radius and a decimal radius.
+    def test_area_of_circle_basic(self):
+        self.assertAlmostEqual(area_of_circle(2), 12.566370614359172)
+        self.assertAlmostEqual(area_of_circle(2.5), 19.634954084936208)
+
+    # Check a zero radius and a radius smaller than one.
+    def test_area_of_circle_edge_cases(self):
+        self.assertAlmostEqual(area_of_circle(0), 0.0)
+        self.assertAlmostEqual(area_of_circle(0.5), 0.7853981633974483)
+
+    # A negative radius must raise ValueError.
+    def test_area_of_circle_negative(self):
+        with self.assertRaises(ValueError):
+            area_of_circle(-1)
+
+    # A string must raise TypeError, even if it contains digits.
+    def test_area_of_circle_invalid_type(self):
+        with self.assertRaises(TypeError):
+            area_of_circle("2")
 
 
 if __name__ == "__main__":
