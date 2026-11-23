@@ -3,11 +3,11 @@ ID,TYPE,COMMIT #,STATUS,DESCRIPTION,REPORTER,ASSIGNEE,DUE,CREATED,RESOLVED,NOTES
 2,task,a3486fa; a1f6fdb,closed,Implement factorial(),,Qingyun Li,29-Nov,21-Nov,21-Nov,
 3,task,,open,Implement is_prime(),,Qingyun Li,29-Nov,21-Nov,,
 4,task,,closed,Add jsunStation as collaborator,,Qingyun Li,29-Nov,21-Nov,21-Nov,Added andrewtapin and jsunStation to the repository.
-5,task,463f1fc,open,Implement core sqrt(),,Andrew Kirk,29-Nov,21-Nov,,Implemented sqrt and passed all four tests. Merged into main; Qingyun review pending.
-6,task,bd664be,open,Implement area_of_circle(),,Andrew Kirk,29-Nov,21-Nov,,Implemented area_of_circle and passed four tests. Merged into main; Qingyun review pending.
+5,task,463f1fc; f7cf87c,open,Implement core sqrt(),,Andrew Kirk,29-Nov,21-Nov,,Implemented sqrt; four tests passed. Merged in f7cf87c; Qingyun review pending.
+6,task,bd664be; 8e41fa1,open,Implement area_of_circle(),,Andrew Kirk,29-Nov,21-Nov,,Implemented area_of_circle; four tests passed. Merged in 8e41fa1; Qingyun review pending.
 7,task,,open,Write own-function tests for factorial() and is_prime(),,Qingyun Li,29-Nov,21-Nov,,
-8,task,463f1fc; bd664be,open,Write own-function tests for sqrt() and area_of_circle(),,Andrew Kirk,29-Nov,21-Nov,,All eight own-function test methods passed. Qingyun review pending.
+8,task,463f1fc; bd664be; 8e41fa1,open,Write own-function tests for sqrt() and area_of_circle(),,Andrew Kirk,29-Nov,21-Nov,,All eight own-function test methods passed and are on main. Qingyun review pending.
 9,task,,open,Cross-test sqrt() and area_of_circle(),,Qingyun Li,29-Nov,21-Nov,,
 10,task,463f1fc,open,Cross-test factorial() and is_prime(),,Andrew Kirk,29-Nov,21-Nov,,Four factorial cross-test methods passed. is_prime tests pending.
-11,task,cb42db3; 463f1fc,open,Finalize README and issue tracker,,Qingyun Li and Andrew,29-Nov,21-Nov,,README updated. Final documentation and tracker review pending.
-12,task,,open,Review pull requests and test the full library,,Qingyun Li and Andrew,29-Nov,23-Nov,,Both members review changes and run all tests before final completion.
+11,task,cb42db3; 463f1fc; 8e41fa1,open,Finalize README and issue tracker,,Qingyun Li and Andrew,29-Nov,21-Nov,,README reflects both Andrew functions and twelve passing tests. Final group review pending.
+12,task,8e41fa1,open,Review pull requests and test the full library,,Qingyun Li and Andrew,29-Nov,23-Nov,,All twelve current test methods passed after merge. is_prime tests and peer review pending.
