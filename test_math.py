@@ -1,64 +1,62 @@
+# Andrew Kirk
+# QCC Student ID: 24885486
+# Qingyun Li
+# QCC Student ID: 24467146
+# Queensborough Community College
+# ET574 Python Programming - Section M
+# Project 2: Math Function Library
+# test_math.py
+# Unit tests for the Math Function Library.
+
 import unittest
-from my_math import fibonacci, mean
+from my_math import sqrt, factorial
+
 
 class TestMyMath(unittest.TestCase):
-    # ----- fibonacci-----
-    # test if the fabonacci() returns expected values
-    # i.e. fibonacci(0) = 0, fibonacci(1)= 1, ..., fibonacci(6)= 8
-    def test_fibonacci_basic(self):
-        self.assertEqual(fibonacci(0), 0)
-        self.assertEqual(fibonacci(1), 1)
-        self.assertEqual(fibonacci(2), 1)
-        self.assertEqual(fibonacci(3), 2)
-        self.assertEqual(fibonacci(6), 8)
+    # Andrew Kirk: tests for sqrt().
 
-    # test if an invalid value passed in will raise either an error  
-    def test_fibonacci_bad_inputs(self):
-        #test if error will raise when a negative number (-1) is passed in
-        with self.assertRaises((TypeError, ValueError)):
-            fibonacci(-1)
+    # Check square roots of an integer and a float.
+    def test_sqrt_basic(self):
+        self.assertAlmostEqual(sqrt(25), 5.0)
+        self.assertAlmostEqual(sqrt(2.25), 1.5)
 
-     	#test if error will raise when a float number (3.5) is passed in
-        with self.assertRaises((TypeError, ValueError)):
-            fibonacci(3.5)        
+    # Check zero and one.
+    def test_sqrt_edge_cases(self):
+        self.assertAlmostEqual(sqrt(0), 0.0)
+        self.assertAlmostEqual(sqrt(1), 1.0)
 
-        #test if error will raise when an invalid type (string "7") is passed in
-        with self.assertRaises((TypeError, ValueError)):
-            fibonacci("7") 
+    # A negative number must raise ValueError.
+    def test_sqrt_negative(self):
+        with self.assertRaises(ValueError):
+            sqrt(-1)
 
-    # test if the Fibonacci rule is implemented correctly: F(n) = F(n-1) + F(n-2), for n >= 2
-    def test_fibonacci_relation(self):
-        self.assertEqual(fibonacci(7), fibonacci(6) + fibonacci(5))
-        self.assertEqual(fibonacci(10), fibonacci(9) + fibonacci(8))       
+    # A string must raise TypeError, even if it contains digits.
+    def test_sqrt_invalid_type(self):
+        with self.assertRaises(TypeError):
+            sqrt("25")
 
-    # ----- mean -----
-    # test if the mean of a group of numbers passed in will return an expected result
-    # use assertAlmostEqual() when comparing float numbers.
-    def test_mean_basic(self):
-        #the mean of numbers 1,2,3 is 2.0
-        self.assertAlmostEqual(mean([1, 2, 3]), 2.0)
 
-	#the mean of two numbers 1.5 and 2.5 is 2.0
-        self.assertAlmostEqual(mean([1.5, 2.5]), 2.0)
+    # Andrew Kirk: cross-tests for Qingyun Li's factorial().
 
-        #the mean of four 0's is 0
-        self.assertAlmostEqual(mean([0, 0, 0, 0]), 0.0)
+    # Check factorials of positive integers.
+    def test_factorial_basic(self):
+        self.assertEqual(factorial(5), 120)
+        self.assertEqual(factorial(3), 6)
 
-    #test special cases
-    def test_mean_singleton_and_mixed(self):
-        #the mean of one number passed should be itself
-        self.assertAlmostEqual(mean([42]), 42.0)
-        #the mean of integer and float numbers mixed, i.e. 1, 2.0 and 3, should be 2.0.
-        self.assertAlmostEqual(mean([1, 2.0, 3]), 2.0)
+    # Zero factorial and one factorial are both one.
+    def test_factorial_edge_cases(self):
+        self.assertEqual(factorial(0), 1)
+        self.assertEqual(factorial(1), 1)
 
-    #test error handles
-    def test_mean_errors(self):
-        #test if error will raise if no number is passed in.
-        with self.assertRaises((ValueError, ZeroDivisionError)):
-            mean([])
-        #test if error will raise if an invalid data type (string "two") is passed in.
-        with self.assertRaises((TypeError, ValueError)):
-            mean([1, "two", 3])  
+    # The function description specifies None for negative input.
+    def test_factorial_negative(self):
+        self.assertEqual(factorial(-1), None)
+
+    # Floats and strings are invalid, according to the description.
+    def test_factorial_invalid_type(self):
+        self.assertEqual(factorial(3.5), None)
+        self.assertEqual(factorial("5"), None)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -18,13 +18,12 @@ Repository: https://github.com/youxiuisli/ET574-M-Project2-Group3
 
 ## Project Status
 
-Qingyun created the shared repository and starter files and implemented factorial(n).
+Qingyun implemented and documented factorial(n).
+Andrew migrated sqrt(x) and its four test methods into this working branch and
+added four cross-test methods for factorial(n). All eight test methods pass locally.
+These changes are pending review and commit.
+is_prime(n) and area_of_circle(radius), along with their tests, remain to be implemented.
 The tracker records the instructor collaborator task as complete.
-Andrew selected sqrt(x) and area_of_circle(radius); his sqrt implementation and
-four passing test methods are in the earlier repository and have not been brought into this one yet.
-is_prime(n) and area_of_circle(radius) remain to be implemented.
-The current test_math.py still contains the instructor's sample tests and must be
-updated to test the group's functions.
 
 ## Files
 
@@ -71,28 +70,30 @@ no third-party packages are needed.
 
 ## Using the Library
 
-This project is an importable function library. Calculations return values for
-the calling code to use; the project does not currently include a menu program.
-
-After the functions are implemented, start Python from the repository root and
-use imports like this:
+This project is an importable function library. Run Python from the repository root.
+The functions currently available on this working branch can be used as follows:
 
 ```python
-from my_math import sqrt, area_of_circle, factorial, is_prime
+from my_math import sqrt, factorial
 
 print(sqrt(25))
-print(area_of_circle(2))
 print(factorial(5))
-print(is_prime(7))
 ```
+
+Expected results are 5.0 and 120, respectively.
+sqrt(x) accepts non-negative integers and floats. It raises TypeError for nonnumeric
+input and ValueError for negative input. factorial(n) accepts non-negative integers
+and returns None for invalid input, as specified by Qingyun's function description.
+area_of_circle(radius) and is_prime(n) will be added in later steps.
 
 ## Running the Tests
 
-Once the functions and tests are implemented, run this command from the repository root:
+Run the current tests from the repository root:
 
 ```text
 python -m unittest -v test_math.py
 ```
 
-The current sample tests import fibonacci and mean, which are not in this library.
-Replace those sample tests with tests for the group functions before running the suite.
+The current suite contains eight test methods: four for sqrt and four cross-tests
+for factorial. The original sample tests for fibonacci and mean have been replaced.
+Additional tests will be added when the original functions are implemented.
