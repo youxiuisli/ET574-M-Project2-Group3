@@ -19,10 +19,10 @@ Repository: https://github.com/youxiuisli/ET574-M-Project2-Group3
 ## Project Status
 
 Qingyun implemented and documented factorial(n).
-Andrew added sqrt(x) and its four test methods to the shared library and
-added four cross-test methods for factorial(n). All eight test methods pass locally.
-The sqrt implementation and tests are included on main; Qingyun's peer review is pending.
-is_prime(n) and area_of_circle(radius), along with their tests, remain to be implemented.
+Andrew implemented sqrt(x) and area_of_circle(radius), with four test methods for each,
+and added four cross-test methods for factorial(n). All twelve test methods pass locally.
+Andrew's implementations and tests are included on main; Qingyun's peer review is pending.
+is_prime(n) and its tests remain to be implemented.
 The tracker records the instructor collaborator task as complete.
 
 ## Files
@@ -74,17 +74,20 @@ This project is an importable function library. Run Python from the repository r
 The currently implemented functions can be used as follows:
 
 ```python
-from my_math import sqrt, factorial
+from my_math import sqrt, factorial, area_of_circle
 
 print(sqrt(25))
 print(factorial(5))
+print(area_of_circle(2))
 ```
 
-Expected results are 5.0 and 120, respectively.
+Expected results are 5.0, 120, and approximately 12.566370614359172, respectively.
 sqrt(x) accepts non-negative integers and floats. It raises TypeError for nonnumeric
 input and ValueError for negative input. factorial(n) accepts non-negative integers
 and returns None for invalid input, as specified by Qingyun's function description.
-area_of_circle(radius) and is_prime(n) will be added in later steps.
+area_of_circle(radius) accepts non-negative integers and floats and returns the area
+in square units. It raises TypeError for nonnumeric input and ValueError for negative input.
+is_prime(n) will be added in a later step.
 
 ## Running the Tests
 
@@ -94,6 +97,6 @@ Run the current tests from the repository root:
 python -m unittest -v test_math.py
 ```
 
-The current suite contains eight test methods: four for sqrt and four cross-tests
-for factorial. The original sample tests for fibonacci and mean have been replaced.
-Additional tests will be added when the original functions are implemented.
+The current suite contains twelve test methods: four for sqrt, four for area_of_circle,
+and four cross-tests for factorial. The original sample tests for fibonacci and mean have been replaced.
+Additional tests will be added when is_prime is implemented and partner testing is completed.

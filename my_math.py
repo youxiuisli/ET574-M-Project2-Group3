@@ -51,3 +51,25 @@ def sqrt(x):
         raise ValueError("x must be non-negative")
     # Step 3: Calculate the square root using exponentiation
     return x ** 0.5
+
+
+"""
+function name: area_of_circle
+purpose: Calculates the area of a circle with a non-negative radius.
+author: Andrew Kirk
+parameters: radius (int or float): A non-negative radius.
+return value(s): (float): The area in square units.
+"""
+
+def area_of_circle(radius):
+    # Step 1: Check if radius is a number (int or float).
+    if not isinstance(radius, (int, float)):
+        raise TypeError("area_of_circle(radius) requires a number")
+
+    # Step 2: Check if radius is non-negative.
+    if radius < 0:
+        raise ValueError("radius must be non-negative")
+
+    # Step 3: Calculate the area using pi times the radius squared.
+    PI = 3.141592653589793
+    return PI * radius ** 2
